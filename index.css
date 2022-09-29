@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply font-body text-black font-light max-w-full overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .col {
+    @apply flex flex-col;
+  }
+
+  .row {
+    @apply flex flex-row;
+  }
+
+  .inset-center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
+  .flex-center {
+    @apply items-center justify-center;
+  }
+
+  .text-shadow {
+    text-shadow: 1px 1px #fb6f92, -1px -1px #fb6f92, -1px 1px #fb6f92,
+      1px -1px #fb6f92;
+  }
+
+  .scroll-text {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-animation: my-animation 10s linear infinite;
+    -webkit-animation: my-animation 10s linear infinite;
+    animation: my-animation 10s linear infinite;
+  }
+}
+
+@font-face {
+  font-family: "Tamzen";
+  src: url("/public/fonts/Tamzen8x16r.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Tamzen Bold";
+  src: url("/fonts/Tamzen8x16b.ttf") format("truetype");
+}
+
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

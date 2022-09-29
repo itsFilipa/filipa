@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind -->
+    <link href="./index.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Filipa's Portfolio</title>
+  </head>
+
+  <body
+    class="bg-bgpink bg-fixed bg-no-repeat mx-16 my-8"
+    style="
+      background-image: url('/public/triangle-bl.svg'),
+        url('/public/triangle-tr.svg');
+      background-position: left bottom, right top;
+    "
+  >
+    <div class="row">
+      <div class="col">
+        <div class="grid grid-cols-2 relative">
+          <div>
+            <img src="/public/grid.svg" />
+          </div>
+          <div
+            class="bg-ultrapink aspect-[3.6/2.2] absolute w-[360px] top-[39px] left-[60px] flex items-center"
+          >
+            <div class="grid grid-cols-2 items-center relative">
+              <div class="col gap-4 w-[180px] ml-8">
+                <p class="text-white">
+                  Hi, I'm Filipa and I like to design and work on frontend
+                  development
+                </p>
+                <p class="text-white font-body">
+                  I'm working hard to develop other skills
+                </p>
+              </div>
+              <img
+                src="/public/emoji.svg"
+                class="border-ultrapink border rounded-full absolute -right-12"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- HP & EXP bars -->
+
+        <!-- <div class="col mt-20 ml-24 w-fit">
+          <div class="row items-center gap-4">
+            <div class="font-display font-bold text-xl text-white text-shadow">
+              HP
+            </div>
+            <div
+              class="w-[244px] border-white border-8 -skew-x-[16deg] translate-x-3 shadow-[6px_4px_0_0_rgba(120,113,108,0.1),0_0_0_1px_rgba(251,111,146,1)] rounded-[10px] relative"
+            >
+              <span
+                class="w-[85%] p-[10px] block rounded-sm bg-gradient-to-r from-gradientpink to-gradientred"
+              ></span>
+            </div>
+          </div>
+          <div class="row items-center mt-8 gap-4">
+            <div class="font-display font-bold text-xl text-white text-shadow">
+              EXP
+            </div>
+            <div
+              class="w-[244px] border-white border-8 -skew-x-[16deg] translate-x-3 shadow-[6px_4px_0_0_rgba(120,113,108,0.1),0_0_0_1px_rgba(251,111,146,1)] rounded-[10px] relative"
+            >
+              <span
+                class="w-[40%] p-[10px] block rounded-sm bg-gradient-to-r from-gradientpink to-gradientred"
+              ></span>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- HP & EXP bars -->
+
+        <!-- tools.zip window -->
+
+        <div
+          class="w-80 h-72 border border-ultrapink rounded-[4px] mt-20 ml-20"
+        >
+          <div class="w-full bg-ultrapink py-1.5 px-3 row justify-between">
+            <p class="text-white">tools.zip</p>
+            <div
+              class="border border-white rounded-[4px] w-6 h-6 text-white flex justify-center"
+            >
+              X
+            </div>
+          </div>
+
+          <div class="col gap-1 m-3">
+            <div class="row items-center gap-2">
+              <img src="/public/icons/doc.svg" />
+              <p>ionic.exe</p>
+            </div>
+            <div class="row items-center gap-2">
+              <img src="/public/icons/doc.svg" />
+              <p>react.ts</p>
+            </div>
+            <div class="row items-center gap-2">
+              <img src="/public/icons/doc.svg" />
+              <p>tailwind.css</p>
+            </div>
+            <div class="row items-center gap-2">
+              <img src="/public/icons/doc.svg" />
+              <p>typescript.ts</p>
+            </div>
+            <div class="row items-center gap-2">
+              <img src="/public/icons/doc.svg" />
+              <p>javascript.js</p>
+            </div>
+            <div class="row items-center gap-2">
+              <img src="/public/icons/doc.svg" />
+              <p>css.styles</p>
+            </div>
+            <div class="row items-center gap-2">
+              <img src="/public/icons/doc.svg" />
+              <p>figma.exe</p>
+            </div>
+            <div class="row items-center gap-2">
+              <img src="/public/icons/doc.svg" />
+              <p>git.exe</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- tools.zip window -->
+      </div>
+
+      <!-- Scrollable column -->
+
+      <div class="w-[37%] h-fit border border-ultrapink rounded-[4px]">
+        <div class="w-full bg-ultrapink py-1.5 px-3 row justify-between">
+          <p class="text-white">README.txt</p>
+          <div
+            class="border border-white rounded-[4px] w-6 h-6 text-white flex justify-center"
+          >
+            X
+          </div>
+        </div>
+
+        <div class="col gap-1 m-3">
+          <p>This is a pinned post.</p>
+          <p>
+            Below here will be all the
+            <b class="font-bodybold">reports</b> related to the IPM course and
+            further links.
+          </p>
+          <p>
+            All reports are downloadable, so if any links are broken please
+            contact me at a.canelhas@campus.[<span
+              class="line-through decoration-2"
+              >redacted</span
+            >].pt
+          </p>
+        </div>
+      </div>
+
+      <!-- Scrollable column -->
+
+      <div
+        class="w-[30%] h-12 bg-white border border-ultrapink absolute right-0 overflow-hidden flex items-center"
+        style="transform: rotate(38deg) translateX(20%)"
+      >
+        <p class="scroll-text w-full">This website is under construction</p>
+      </div>
+    </div>
+  </body>
+</html>
