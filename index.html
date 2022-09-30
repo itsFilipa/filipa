@@ -21,16 +21,16 @@
   <body
     class="bg-bgpink bg-fixed bg-no-repeat mx-16 my-8"
     style="
-      background-image: url('/public/triangle-bl.svg'),
-        url('/public/triangle-tr.svg');
+      background-image: url('/images/triangle-bl.svg'),
+        url('/images/triangle-tr.svg');
       background-position: left bottom, right top;
     "
   >
-    <div class="row">
-      <div class="col">
-        <div class="grid grid-cols-2 relative">
-          <div>
-            <img src="/public/grid.svg" />
+    <main class="flex flex-wrap w-full items-start">
+      <aside class="col sticky content-center top-[39px]">
+        <div class="grid grid-cols-2 relative w-[600px]">
+          <div class="min-w-[360px]">
+            <img src="/images/grid.svg" class="min-w-full" />
           </div>
           <div
             class="bg-ultrapink aspect-[3.6/2.2] absolute w-[360px] top-[39px] left-[60px] flex items-center"
@@ -46,7 +46,7 @@
                 </p>
               </div>
               <img
-                src="/public/emoji.svg"
+                src="/images/emoji.svg"
                 class="border-ultrapink border rounded-full absolute -right-12"
               />
             </div>
@@ -100,47 +100,47 @@
 
           <div class="col gap-1 m-3">
             <div class="row items-center gap-2">
-              <img src="/public/icons/doc.svg" />
+              <img src="/icons/doc.svg" />
               <p>ionic.exe</p>
             </div>
             <div class="row items-center gap-2">
-              <img src="/public/icons/doc.svg" />
+              <img src="/icons/doc.svg" />
               <p>react.ts</p>
             </div>
             <div class="row items-center gap-2">
-              <img src="/public/icons/doc.svg" />
+              <img src="/icons/doc.svg" />
               <p>tailwind.css</p>
             </div>
             <div class="row items-center gap-2">
-              <img src="/public/icons/doc.svg" />
+              <img src="/icons/doc.svg" />
               <p>typescript.ts</p>
             </div>
             <div class="row items-center gap-2">
-              <img src="/public/icons/doc.svg" />
+              <img src="/icons/doc.svg" />
               <p>javascript.js</p>
             </div>
             <div class="row items-center gap-2">
-              <img src="/public/icons/doc.svg" />
+              <img src="/icons/doc.svg" />
               <p>css.styles</p>
             </div>
             <div class="row items-center gap-2">
-              <img src="/public/icons/doc.svg" />
+              <img src="/icons/doc.svg" />
               <p>figma.exe</p>
             </div>
             <div class="row items-center gap-2">
-              <img src="/public/icons/doc.svg" />
+              <img src="/icons/doc.svg" />
               <p>git.exe</p>
             </div>
           </div>
         </div>
 
         <!-- tools.zip window -->
-      </div>
+      </aside>
 
       <!-- Scrollable column -->
 
-      <div class="col gap-8">
-        <div class="w-[75%] h-fit border border-ultrapink rounded-[4px]">
+      <section class="col gap-8 max-w-lg columns-1 block">
+        <div class="w-full h-fit border border-ultrapink rounded-[4px]">
           <div class="w-full bg-ultrapink py-1.5 px-3 row justify-between">
             <p class="text-white">README.txt</p>
             <div
@@ -167,19 +167,21 @@
           </div>
         </div>
 
-        <div class="w-[75%] h-fit border border-ultrapink rounded-[4px]">
+        <p class="font-bodybold text-xl">ASSIGNMENTS</p>
+
+        <div class="w-full h-fit border border-ultrapink rounded-[4px]">
           <div class="w-full bg-ultrapink pt-1.5 px-3 row justify-between">
             <div class="text-white">
               <button
                 id="badDesignBtn"
-                class="border-x-white border-t-white border-b-0 border p-1 bg-popstar hover:bg-blush focus:bg-ultrapink"
+                class="border-x-white border-t-white border-b-0 border p-1 hover:bg-blush"
                 onclick="clickHandle(event, 'badDesign')"
               >
                 BAD DESIGN
               </button>
               <button
                 id="goodDesignBtn"
-                class="border-x-white border-t-white border-b-0 border p-1 bg-popstar hover:bg-blush focus:bg-ultrapink"
+                class="border-x-white border-t-white border-b-0 border p-1 bg-popstar hover:bg-blush"
                 onclick="clickHandle(event, 'goodDesign')"
               >
                 GOOD DESIGN
@@ -225,30 +227,33 @@
                 charset="utf-8"
               ></script>
             </div>
-            <div id="goodDesign" class="">
+            <div id="goodDesign" class="hidden">
               <p>This is my example of a good design</p>
-              <img src="roundabout.jpg" class="object-scale-down w-[520px]" />
+              <img
+                src="/images/roundabout.jpg"
+                class="object-scale-down w-[520px]"
+              />
               <p>
                 Nothing makes traffic flow easier and safer than a roundabout.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- Scrollable column -->
 
       <!-- Banner -->
 
       <div
-        class="w-[30%] h-12 bg-white border border-ultrapink absolute right-0 overflow-hidden flex items-center"
+        class="w-[30%] h-12 bg-white border border-ultrapink overflow-hidden absolute right-0 flex items-center"
         style="transform: rotate(38deg) translateX(20%)"
       >
         <p class="scroll-text w-full">This website is under construction</p>
       </div>
 
       <!-- Banner -->
-    </div>
+    </main>
 
     <!-- Scripts -->
 
@@ -257,18 +262,28 @@
         let i, tabcontent, tablinks;
 
         if (tabName == "badDesign") {
+          document
+            .getElementById("goodDesignBtn")
+            .classList.remove("bg-ultrapink");
+          document.getElementById("goodDesignBtn").classList.add("bg-popstar");
+          event.currentTarget.classList.remove("bg-popstar");
+          event.currentTarget.classList.add("bg-ultrapink");
           document.getElementById("goodDesign").style.display = "none";
           document.getElementById("badDesign").style.display = "block";
         } else {
-          document.getElementById("badDesignBtn").classList.remove("focus");
+          document
+            .getElementById("badDesignBtn")
+            .classList.remove("bg-ultrapink");
+          document.getElementById("badDesignBtn").classList.add("bg-popstar");
+          event.currentTarget.classList.remove("bg-popstar");
+          event.currentTarget.classList.add("bg-ultrapink");
           document.getElementById("badDesign").style.display = "none";
           document.getElementById("goodDesign").style.display = "block";
         }
       }
 
       window.onload = (event) => {
-        document.getElementById("badDesignBtn").className += " focus";
-        document.getElementById("badDesignBtn").click();
+        document.getElementById("badDesignBtn").classList.add("bg-ultrapink");
       };
     </script>
   </body>
