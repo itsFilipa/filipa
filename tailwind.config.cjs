@@ -16,6 +16,8 @@ module.exports = {
         black: "#1F1E1C",
         gradientpink: "#E786AE",
         gradientred: "#ED6770",
+        popstar: "#BD546E",
+        blush: "#E66686",
       },
       fontFamily: {
         display: ["Poppins", "sans-serif"],

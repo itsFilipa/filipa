@@ -139,34 +139,106 @@
 
       <!-- Scrollable column -->
 
-      <div class="w-[37%] h-fit border border-ultrapink rounded-[4px]">
-        <div class="w-full bg-ultrapink py-1.5 px-3 row justify-between">
-          <p class="text-white">README.txt</p>
-          <div
-            class="border border-white rounded-[4px] w-6 h-6 text-white flex justify-center"
-          >
-            X
+      <div class="col gap-8">
+        <div class="w-[75%] h-fit border border-ultrapink rounded-[4px]">
+          <div class="w-full bg-ultrapink py-1.5 px-3 row justify-between">
+            <p class="text-white">README.txt</p>
+            <div
+              class="border border-white rounded-[4px] w-6 h-6 text-white flex justify-center"
+            >
+              X
+            </div>
+          </div>
+
+          <div class="col gap-1 m-3">
+            <p>This is a pinned post.</p>
+            <p>
+              Below here will be all the
+              <b class="font-bodybold">reports</b> related to the IPM course and
+              further links.
+            </p>
+            <p>
+              All reports are downloadable, so if any links are broken please
+              contact me at a.canelhas@campus.[<span
+                class="line-through decoration-2"
+                >redacted</span
+              >].pt
+            </p>
           </div>
         </div>
 
-        <div class="col gap-1 m-3">
-          <p>This is a pinned post.</p>
-          <p>
-            Below here will be all the
-            <b class="font-bodybold">reports</b> related to the IPM course and
-            further links.
-          </p>
-          <p>
-            All reports are downloadable, so if any links are broken please
-            contact me at a.canelhas@campus.[<span
-              class="line-through decoration-2"
-              >redacted</span
-            >].pt
-          </p>
+        <div class="w-[75%] h-fit border border-ultrapink rounded-[4px]">
+          <div class="w-full bg-ultrapink pt-1.5 px-3 row justify-between">
+            <div class="text-white">
+              <button
+                id="badDesignBtn"
+                class="border-x-white border-t-white border-b-0 border p-1 bg-popstar hover:bg-blush focus:bg-ultrapink"
+                onclick="clickHandle(event, 'badDesign')"
+              >
+                BAD DESIGN
+              </button>
+              <button
+                id="goodDesignBtn"
+                class="border-x-white border-t-white border-b-0 border p-1 bg-popstar hover:bg-blush focus:bg-ultrapink"
+                onclick="clickHandle(event, 'goodDesign')"
+              >
+                GOOD DESIGN
+              </button>
+            </div>
+            <div
+              class="border border-white rounded-[4px] w-6 h-6 text-white flex justify-center"
+            >
+              X
+            </div>
+          </div>
+
+          <div class="col gap-1 m-3">
+            <div id="badDesign">
+              <p>This is my example of a bad design</p>
+              <p>
+                <span class="font-bodybold">TL;DR</span>: if the user does not
+                lift their phone, they probably won't know they have to point
+                the camera to the watch
+              </p>
+
+              <blockquote
+                class="twitter-tweet"
+                data-lang="en"
+                data-dnt="true"
+                data-theme="dark"
+              >
+                <p lang="en" dir="ltr">
+                  Watching someone use your product:
+                  <a href="https://t.co/JKSfgFApNT"
+                    >pic.twitter.com/JKSfgFApNT</a
+                  >
+                </p>
+                &mdash; Ben South (@bnj)
+                <a
+                  href="https://twitter.com/bnj/status/1569098746167959552?ref_src=twsrc%5Etfw"
+                  >September 11, 2022</a
+                >
+              </blockquote>
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+            <div id="goodDesign" class="">
+              <p>This is my example of a good design</p>
+              <img src="roundabout.jpg" class="object-scale-down w-[520px]" />
+              <p>
+                Nothing makes traffic flow easier and safer than a roundabout.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Scrollable column -->
+
+      <!-- Banner -->
 
       <div
         class="w-[30%] h-12 bg-white border border-ultrapink absolute right-0 overflow-hidden flex items-center"
@@ -174,6 +246,30 @@
       >
         <p class="scroll-text w-full">This website is under construction</p>
       </div>
+
+      <!-- Banner -->
     </div>
+
+    <!-- Scripts -->
+
+    <script>
+      function clickHandle(event, tabName) {
+        let i, tabcontent, tablinks;
+
+        if (tabName == "badDesign") {
+          document.getElementById("goodDesign").style.display = "none";
+          document.getElementById("badDesign").style.display = "block";
+        } else {
+          document.getElementById("badDesignBtn").classList.remove("focus");
+          document.getElementById("badDesign").style.display = "none";
+          document.getElementById("goodDesign").style.display = "block";
+        }
+      }
+
+      window.onload = (event) => {
+        document.getElementById("badDesignBtn").className += " focus";
+        document.getElementById("badDesignBtn").click();
+      };
+    </script>
   </body>
 </html>

@@ -75,3 +75,7 @@
     transform: translateX(-100%);
   }
 }
+
+.focus{
+  background-color: theme("colors.ultrapink");
+}
