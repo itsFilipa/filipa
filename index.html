@@ -170,6 +170,7 @@
         <p class="font-bodybold text-xl">ASSIGNMENTS</p>
 
         <div class="w-full h-fit border border-ultrapink rounded-[4px]">
+          <!-- Toolbar -->
           <div class="w-full bg-ultrapink pt-1.5 px-3 row justify-between">
             <div class="text-white">
               <button
@@ -194,9 +195,14 @@
             </div>
           </div>
 
+          <!-- Toolbar -->
+
           <div class="col gap-1 m-3">
+            <!-- Bad design content -->
             <div id="badDesign">
-              <p>This is my example of a bad design</p>
+              <p class="text-lg font-bodybold">
+                This is my example of a bad design
+              </p>
               <p>
                 <span class="font-bodybold">TL;DR</span>: if the user does not
                 lift their phone, they probably won't know they have to point
@@ -227,8 +233,12 @@
                 charset="utf-8"
               ></script>
             </div>
+
+            <!-- Good design content -->
             <div id="goodDesign" class="hidden">
-              <p>This is my example of a good design</p>
+              <p class="text-lg font-bodybold">
+                This is my example of a good design
+              </p>
               <img
                 src="/images/roundabout.jpg"
                 class="object-scale-down w-[520px]"
@@ -237,6 +247,51 @@
                 Nothing makes traffic flow easier and safer than a roundabout.
               </p>
             </div>
+          </div>
+        </div>
+
+        <p class="font-bodybold text-xl">Reports</p>
+
+        <div class="w-full h-fit border border-ultrapink rounded-[4px]">
+          <div class="w-full bg-ultrapink py-1.5 px-3 row justify-between">
+            <p class="text-white">Report_01.pdf</p>
+            <div
+              class="border border-white rounded-[4px] w-6 h-6 text-white flex justify-center"
+            >
+              X
+            </div>
+          </div>
+
+          <div class="col gap-1 m-3">
+            <p class="font-bodybold text-lg mb-2">Project proposal</p>
+            <p>
+              <span class="font-bodybold">Notii</span>: a note-taking mobile
+              phone app, based on the Zettelkasten theory.
+            </p>
+            <p>
+              A <span class="font-bodybold">simple markdown</span> based
+              note-taking application, Notii will allow users to fully focus on
+              writting and building a network of various topics.
+            </p>
+            <p>
+              Users will also be able to explore and find connections between
+              their notes through the usage of
+              <span class="font-bodybold">tags and connection graphs</span>.
+            </p>
+
+            <p class="mt-2 flex gap-2 text-blush">
+              Download the full report
+              <a
+                href="/files/report_1.pdf"
+                download
+                class="underline flex w-fit flex-center gap-1"
+                >here
+                <img src="/icons/link_blush.svg" />
+              </a>
+            </p>
+            <p class="flex justify-end text-sm mt-2">
+              Created at: 01/10/2022 12:18 AM
+            </p>
           </div>
         </div>
       </section>
